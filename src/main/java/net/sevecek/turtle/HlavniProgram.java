@@ -8,9 +8,45 @@ public class HlavniProgram {
         Turtle zofka;
 
         zofka = new Turtle();
-
         nakresliPrasatko(zofka);
 
+        zofka.setLocation(200, 200);
+        nakresliOsmiuhelnik(zofka);
+
+        zofka.setLocation(200, 400);
+        nakresliKolecko(zofka);
+
+        zofka.setLocation(400,400);
+        nakresliSlunicko(zofka);
+    }
+
+    private void nakresliSlunicko(Turtle zofka) {
+        for (int i = 0; i < 25; i++) {
+            zofka.move(12);
+            zofka.turnLeft(90);
+            zofka.move(20);
+            zofka.penUp();
+            zofka.turnLeft(180);
+            zofka.move(20);
+            zofka.turnLeft(75);
+            zofka.penDown();
+
+        }
+    }
+
+    private void nakresliKolecko(Turtle zofka) {
+        for (int i = 0; i < 40; i++) {
+            zofka.move(5);
+            zofka.turnRight(10);
+
+        }
+    }
+
+    private void nakresliOsmiuhelnik(Turtle zofka) {
+        for (int i = 0; i < 8; i++) {
+            zofka.move(40);
+            zofka.turnRight(45);
+        }
     }
 
     private void nakresliPrasatko(Turtle zofka) {
