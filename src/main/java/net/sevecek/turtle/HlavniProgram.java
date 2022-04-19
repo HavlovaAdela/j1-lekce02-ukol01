@@ -22,20 +22,13 @@ public class HlavniProgram {
 //        zofka.setLocation(500,150);
 //        nakresliDomecek(zofka);
 
-        zofka.setLocation(100,310);
-        nakresliDomecek(zofka);
 
-        zofka.setLocation(200,310);
-        nakresliDomecek(zofka);
+        for (int i = 100; i <= 500; i += 100){
+            zofka.setLocation(i,310);
+            nakresliDomecek(zofka);
+        }
 
-        zofka.setLocation(300,310);
-        nakresliDomecek(zofka);
 
-        zofka.setLocation(400,310);
-        nakresliDomecek(zofka);
-
-        zofka.setLocation(500,310);
-        nakresliDomecek(zofka);
 
         zofka.setLocation(100,420);
         nakresliDomecek(zofka);
@@ -181,35 +174,29 @@ public class HlavniProgram {
         zofka.turnRight(90.0);
         zofka.move(50.0);
         zofka.turnRight(25.0);
-        zofka.move(20.0);
-        zofka.turnRight(180);
-        zofka.penUp();
-        zofka.move(20);
-        zofka.turnRight(110);
-        zofka.penDown();
-        zofka.move(20);
-        zofka.penUp();
-        zofka.turnRight(180);
-        zofka.move(20);
-        zofka.turnRight(315);
+        nakresliNozicky(zofka);
         zofka.penDown();
         zofka.move(100);
         zofka.turnLeft(50.0);
-        zofka.move(20.0);
-        zofka.turnRight(180);
-        zofka.penUp();
-        zofka.move(20);
-        zofka.turnRight(110);
-        zofka.penDown();
-        zofka.move(20);
-        zofka.penUp();
-        zofka.turnRight(180);
-        zofka.move(20);
-        zofka.turnRight(315);
+        nakresliNozicky(zofka);
         zofka.turnRight(20);
         zofka.penDown();
         zofka.move(45);
         zofka.turnRight(115);
         zofka.move(45);
+    }
+
+    private void nakresliNozicky(Turtle zofka) {
+        zofka.move(20.0);
+        zofka.turnRight(180);
+        zofka.penUp();
+        zofka.move(20);
+        zofka.turnRight(110);
+        zofka.penDown();
+        zofka.move(20);
+        zofka.penUp();
+        zofka.turnRight(180);
+        zofka.move(20);
+        zofka.turnRight(315);
     }
 }
